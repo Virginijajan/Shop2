@@ -1,0 +1,18 @@
+<h4>Shops</h4>
+<ul class="list-group">
+    <li class="list-group-item list-group-item-primary">
+        <div class="row">
+
+            <div class="col-sm">Id</div>
+            <div class="col-sm">Name</div>
+            <div class="col-sm"> </div>
+
+        </div>
+    </li>
+
+    <app-all-shops-shop *ngFor="let shop of shops" [shop]="shop" (deleteShop)="deleteShop($event)">
+    </app-all-shops-shop>
+    <app-add-shop (addShop)="addShop($event)"></app-add-shop>
+
+
+</ul>

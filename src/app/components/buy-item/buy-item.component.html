@@ -1,0 +1,14 @@
+<div class="container">
+    <h4>Buy item</h4>
+    <form (ngSubmit)="onSubmit()">
+        <select class="form-control" [(ngModel)]="name" name="name">
+            <option value="" disabled selected>Select Shop Item</option>
+            <option *ngFor="let shopItem of shopItems" [ngValue]="shopItem.name">{{shopItem.name}}</option>
+        </select>
+        <input class="form-control" type="text" name="quantity" [(ngModel)]="quantity" placeholder="Quantity">
+        <div class="button">
+            <input class="btn btn-secondary" type="submit" value="Submit">
+        </div>
+
+    </form>
+</div>

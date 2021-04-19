@@ -1,0 +1,46 @@
+<h4>Shop items</h4>
+<ul class="list-group">
+    <li class="list-group-item list-group-item-primary">
+        <div class="row">
+
+            <div class="col-sm">Name</div>
+            <div class="col-sm">Category</div>
+            <div class="col-sm">Price</div>
+            <div class="col-sm">Quantity</div>
+            <div class="col-sm">Shop ID</div>
+            <div class="col-sm"> </div>
+
+        </div>
+    </li>
+
+    <app-item *ngFor="let shopItem of shopItems" [shopItem]="shopItem" (deleteShopItem)="deleteShopItem($event)">
+    </app-item>
+    <app-add-shop-item (addShopItem)="addShopItem($event)"></app-add-shop-item>
+    <app-buy-item (buyShopItem)="buyShopItem($event)"></app-buy-item>
+
+
+</ul>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Category</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Discount</th>
+            <th scope="col">Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ buyItem.category}}</td>
+            <td>{{ buyItem.itemName}}</td>
+            <td>{{ buyItem.price}}</td>
+            <td>{{ buyItem.quantity}}</td>
+            <td>{{ buyItem.discount}}</td>
+            <td>{{ buyItem.amount}}</td>
+        </tr>
+
+    </tbody>
+</table>

@@ -1,0 +1,19 @@
+<h4>Bought items</h4>
+<ul class="list-group">
+    <li class="list-group-item list-group-item-primary">
+        <div class="row">
+            <div class="col-sm">Category</div>
+            <div class="col-sm">Name</div>
+            <div class="col-sm">Price</div>
+            <div class="col-sm">Quantity</div>
+            <div class="col-sm">Discount</div>
+            <div class="col-sm">Amount</div>
+
+
+        </div>
+    </li>
+
+    <app-order-item *ngFor="let orderItem of orderItems" [orderItem]="orderItem">
+    </app-order-item>
+
+</ul>

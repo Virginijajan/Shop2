@@ -1,0 +1,15 @@
+<!-- <p>{{shopItem.name}}</p> -->
+<li class="list-group-item">
+    <div class="row">
+
+        <div class="col-sm">{{ shopItem.name }}</div>
+        <div class="col-sm">{{ shopItem.category }}</div>
+        <div class="col-sm">{{ shopItem.price }}</div>
+        <div class="col-sm">{{ shopItem.quantity }}</div>
+        <div class="col-sm">{{ shopItem.shopId }}</div>
+        <div class="btn-group">
+            <button (click)="onDelete(shopItem)" class="btn btn-secondary">Delete</button>
+            <button class="btn btn-outline-secondary">Update</button>
+        </div>
+    </div>
+</li>

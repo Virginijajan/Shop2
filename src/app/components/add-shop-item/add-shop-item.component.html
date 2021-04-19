@@ -1,0 +1,20 @@
+<div class="container">
+    <h4>Add new item</h4>
+    <form (ngSubmit)="onSubmit()">
+        <input class="form-control" type="text" name="name" [(ngModel)]="name" placeholder="Name">
+        <input class="form-control" type="text" name="category" [(ngModel)]="category" placeholder="Category">
+        <input class="form-control" type="text" name="price" [(ngModel)]="price" placeholder="Price">
+        <input class="form-control" type="text" name="quantity" [(ngModel)]="quantity" placeholder="Quantity">
+
+        <!-- <input class="form-control" type="text" name="shopId" [(ngModel)]="shopId" placeholder="Shop ID"> -->
+
+        <select class="form-control" [(ngModel)]="shopId" name="shopId" placeholder="Shop">
+            <option value="" disabled selected>Select Shop</option>
+            <option *ngFor="let shop of shops" [ngValue]="shop.id">{{shop.name}}</option>
+        </select>
+        <div class="button">
+            <input class="btn btn-secondary" type="submit" value="Submit">
+        </div>
+
+    </form>
+</div>
